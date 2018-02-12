@@ -18,6 +18,11 @@ import { MatCardModule } from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routedComponents } from './app-routing.module';
+import { StartComponent } from './start/start.component';
+import { ContainerBasicsComponent } from './container-basics/container-basics.component';
+import { BasicRowColumnComponent } from './basic-row-column/basic-row-column.component';
+import { ReversedRowColumnComponent } from './reversed-row-column/reversed-row-column.component';
+import { MainCrossAxisComponent } from './main-cross-axis/main-cross-axis.component';
 
 @NgModule({
     imports: [
@@ -40,7 +45,12 @@ import { AppRoutingModule, routedComponents } from './app-routing.module';
     ],
     declarations: [
         AppComponent,
-        routedComponents
+        routedComponents,
+        StartComponent,
+        ContainerBasicsComponent,
+        BasicRowColumnComponent,
+        ReversedRowColumnComponent,
+        MainCrossAxisComponent
     ],
     providers: [
     ],
