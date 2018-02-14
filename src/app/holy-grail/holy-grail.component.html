@@ -1,0 +1,109 @@
+<div fxLayout="column"
+     class="master-container"
+>
+
+  <div fxLayout="row"
+       fxLayoutAlign="center center"
+       class="header"
+  >
+    <h1>My App</h1>
+  </div>
+
+  <div fxLayout="row"
+       fxLayout.lt-sm="column"
+  >
+    <div fxLayout="column"
+         class="side-pane blue-bg"
+         ngClass.lt-sm="small"
+         [ngStyle.lt-sm]="{
+         'background': 'pink',
+         'font-weight': 'bold'
+         }"
+    >
+      <mat-card>Link 1</mat-card>
+      <mat-card>Link 2</mat-card>
+      <mat-card>Link 3</mat-card>
+      <mat-card>Link 4</mat-card>
+      <mat-card>Link 1</mat-card>
+      <mat-card>Link 2</mat-card>
+      <mat-card>Link 3</mat-card>
+      <mat-card>Link 4</mat-card>
+      <mat-card>Link 1</mat-card>
+      <mat-card>Link 2</mat-card>
+      <mat-card>Link 3</mat-card>
+      <mat-card>Link 4</mat-card>
+      <mat-card>Link 1</mat-card>
+      <mat-card>Link 2</mat-card>
+      <mat-card>Link 3</mat-card>
+      <mat-card>Link 4</mat-card>
+      <mat-card>Link 1</mat-card>
+      <mat-card>Link 2</mat-card>
+      <mat-card>Link 3</mat-card>
+      <mat-card>Link 4</mat-card>
+      <mat-card>Link 1</mat-card>
+      <mat-card>Link 2</mat-card>
+      <mat-card>Link 3</mat-card>
+      <mat-card>Link 4</mat-card>
+      <mat-card>Link 1</mat-card>
+      <mat-card>Link 2</mat-card>
+      <mat-card>Link 3</mat-card>
+      <mat-card>Link 4</mat-card>
+    </div>
+    <div fxLayout="column"
+         class="main-content green-bg"
+         fxLayout.lt-sm="row"
+         ngClass.lt-sm="small"
+    >
+      <div fxLayout="row"
+           fxLayoutWrap
+           ngClass.lt-sm="small"
+      >
+
+        <mat-card>1</mat-card>
+        <mat-card>2</mat-card>
+        <mat-card>3</mat-card>
+        <mat-card>4</mat-card>
+        <mat-card>5</mat-card>
+        <mat-card>6</mat-card>
+        <mat-card>7</mat-card>
+        <mat-card>8</mat-card>
+        <mat-card>9</mat-card>
+        <mat-card>10</mat-card>
+
+        <mat-card fxShow [fxShow.xs]="true" [fxShow.gt-xs]="false">
+          I'm visible on moblile
+        </mat-card>
+
+        <mat-card fxShow [fxShow.xs]="false" [fxShow.gt-xs]="true">
+          I'm visible on desktop
+        </mat-card>
+      </div>
+
+    </div>
+    <div fxLayout="column"
+         class="side-pane orange-bg"
+         fxLayout.lt-sm="row"
+         ngClass.lt-sm="small"
+    >
+      <div *ngIf="isPhone">
+        {{fakeData}}
+      </div>
+
+      <div *ngIf="!isPhone">
+        <mat-card>Ad 1</mat-card>
+        <mat-card>Ad 2</mat-card>
+        <mat-card>Ad 3</mat-card>
+        <mat-card>Ad 4</mat-card>
+      </div>
+
+    </div>
+  </div>
+
+  <div fxLayout="row"
+       fxLayoutAlign="center center"
+       class="footer"
+  >
+    <h3>Footer</h3>
+  </div>
+
+</div>

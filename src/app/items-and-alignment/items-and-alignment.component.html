@@ -1,0 +1,312 @@
+<!--Flexbox element resizing utilizes three (3) parameters:-->
+
+<!--flex-grow: defines how much a flexbox item should grow (proportional to the others) if there's space available. The flex-grow value overrides the width.-->
+<!--flex-shrink: defines how much a flexbox item should shrink if there is not enough space available.-->
+<!--flex-basis: controls the default size of an element, before it is manipulated by other Flexbox properties-->
+
+<!--flex-basis specifies the initial size of the flex item, before any available space is distributed
+    according to the flex factors. When omitted from the flex shorthand, its specified value is the length zero.
+  A flex-basis value set to auto sizes the element according to its size property (which can itself be the keyword
+    auto, which sizes the element based on its contents)-->
+
+<!-- fxFlex directive takes <basis> (size) or the long form <grow> <shrink> <basis> as parameters -->
+
+<!--In the example of flex fill, custom class "card" is used to remove margin and padding of the card, otherwise it will flood the container-->
+
+<h2>Basic Sizing - Row</h2>
+
+<div fxLayout="row"
+     class="container-no-size"
+>
+  <mat-card fxFlex="25%">
+    <p>
+      1 (25%)
+    </p>
+  </mat-card>
+  <mat-card  fxFlex="40%">
+    <p>
+      2 (40%)
+    </p>
+  </mat-card>
+  <mat-card  fxFlex="15%">
+    <p>
+      3 (15%)
+    </p>
+  </mat-card>
+  <mat-card  fxFlex="20%">
+    <p>
+      4 (20%)
+    </p>
+  </mat-card>
+</div>
+
+<h2>Basic Sizing - column</h2>
+
+<div fxLayout="column"
+     style="height: 75vh"
+     class="container-no-size"
+>
+  <mat-card fxFlex="25%">
+    <p>
+      1 (25%)
+    </p>
+  </mat-card>
+  <mat-card  fxFlex="40%">
+    <p>
+      2 (40%)
+    </p>
+  </mat-card>
+  <mat-card  fxFlex="15%">
+    <p>
+      3 (15%)
+    </p>
+  </mat-card>
+  <mat-card  fxFlex="20%">
+    <p>
+      4 (20%)
+    </p>
+  </mat-card>
+</div>
+
+<!-- now let's use the long form for one of our child items
+     here we are telling the item that it should not grow or shrink since both are set to 1
+     and auto tells it to just max out the available width
+     this can be used on an empty div, as below, to create a 'spacer' between items
+ -->
+
+<h2>Long Form 'Spacer' - Row</h2>
+
+<div fxLayout="row"
+     class="container-no-size"
+>
+  <mat-card>
+    <p>
+      1
+    </p>
+  </mat-card>
+  <mat-card>
+    <p>
+      2
+    </p>
+  </mat-card>
+  <div fxFlex></div>
+  <mat-card>
+    <p>
+      3
+    </p>
+  </mat-card>
+  <mat-card>
+    <p>
+      4
+    </p>
+  </mat-card>
+</div>
+
+<!-- This illustrates items growing on load and resizing -->
+<!--  The grow property specifies the length of the flex item relative to the rest of the flex items inside
+        the same container
+      So below the 2nd card will have three times as much space as the other three cards
+-->
+
+<h2>Grow Items - Row</h2>
+
+<div fxLayout="row"
+     class="container-no-size"
+>
+  <mat-card fxFlex="1 1 auto">
+    <p>
+      1
+    </p>
+  </mat-card>
+  <mat-card fxFlex="3 1 auto">
+    <p>
+      2 (factor of 3)
+    </p>
+  </mat-card>
+  <mat-card fxFlex="1 1 auto">
+    <p>
+      3
+    </p>
+  </mat-card>
+  <mat-card fxFlex="1 1 auto">
+    <p>
+      4
+    </p>
+  </mat-card>
+</div>
+
+<!-- This illustrates items shrinking on load and resizing -->
+<!--  As with the grow property, the shrink property specifies the length of the flex item relative to the rest of
+        the flex items inside the same container
+      So below the 3rd card will shrink to three times smaller than the other three cards, regardless of screen width
+      However, the size must be fixed in order for this to happen (auto will not work in this case)
+      Note how the 3rd card's shrink property overrides it's width set at 25%
+-->
+
+<h2>Shrink Items - Row</h2>
+
+<div fxLayout="row"
+     class="container-no-size"
+>
+  <mat-card fxFlex="1 1 25%">
+    <p>
+      1
+    </p>
+  </mat-card>
+  <mat-card fxFlex="1 1 25%">
+    <p>
+      2
+    </p>
+  </mat-card>
+  <mat-card fxFlex="1 2 25%">
+    <p>
+      3
+    </p>
+  </mat-card>
+  <mat-card fxFlex="1 1 25%">
+    <p>
+      4
+    </p>
+  </mat-card>
+</div>
+
+<!-- The following illustrates how to set the order of different flex items -->
+<!-- Same logic applies for columns -->
+
+<h2>Flex Order</h2>
+
+<div fxLayout="row"
+     class="container-no-size"
+>
+  <mat-card fxFlexOrder="3">
+    <p>
+      1 (order=3)
+    </p>
+  </mat-card>
+  <mat-card fxFlexOrder="4">
+    <p>
+      2 (order=4)
+    </p>
+  </mat-card>
+  <mat-card fxFlexOrder="1">
+    <p>
+      3 (order=1)
+    </p>
+  </mat-card>
+  <mat-card fxFlexOrder="2">
+    <p>
+      4 (order=2)
+    </p>
+  </mat-card>
+</div>
+
+<!-- Here we use offset on a row and it will offset to the left as that percentage of available space
+     as margin-->
+
+<h2>Offset - Row</h2>
+
+<div fxLayout="row"
+     class="container-no-size"
+>
+  <mat-card fxFlexOffset="10%">
+    <p>
+      1 (10%)
+    </p>
+  </mat-card>
+  <mat-card>
+    <p>
+      2
+    </p>
+  </mat-card>
+  <mat-card fxFlexOffset="20%">
+    <p>
+      3 (20%)
+    </p>
+  </mat-card>
+  <mat-card>
+    <p>
+      4
+    </p>
+  </mat-card>
+</div>
+
+<!-- Here we use offset on a column it will offset on the top-->
+
+<h2>Offset - Column</h2>
+
+<div fxLayout="column"
+     class="container-no-size"
+>
+  <mat-card>
+    <p>
+      1
+    </p>
+  </mat-card>
+  <mat-card fxFlexOffset="10%">
+    <p>
+      2 (10%)
+    </p>
+  </mat-card>
+  <mat-card>
+    <p>
+      3
+    </p>
+  </mat-card>
+  <mat-card>
+    <p>
+      4
+    </p>
+  </mat-card>
+</div>
+
+<!-- Here we use various alignment options for the items inside the child items
+     First we'll make a container of fixed size
+     We'll also use fxflex on each item as to make it 1/4 the size of the row container
+     Then notice how each of the <p> elements gets aligned based on the attribute set in the mat-card
+ -->
+
+<h2>Flex Align</h2>
+
+<div fxLayout="row"
+     class="container"
+>
+  <mat-card fxFlex fxFlexAlign="start">
+    <p>
+      1 (start)
+    </p>
+  </mat-card>
+  <mat-card fxFlex fxFlexAlign="center">
+    <p>
+      2 (center)
+    </p>
+  </mat-card>
+  <mat-card fxFlex fxFlexAlign="end">
+    <p>
+      3 (end)
+    </p>
+  </mat-card>
+</div>
+
+<h2>Flex Fill</h2>
+<div fxLayout="row">
+  <div fxLayout="row"
+       class="container-narrow"
+  >
+    <mat-card>
+      <p>
+        No fill
+      </p>
+    </mat-card>
+  </div>
+
+  <div fxLayout="row"
+       class="container-narrow"
+       fxFlexOffset="10%"
+  >
+    <mat-card class="card" fxFlexFill>
+      <p>
+        Fill
+      </p>
+    </mat-card>
+  </div>
+</div>

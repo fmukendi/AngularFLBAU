@@ -1,0 +1,9 @@
+.containerx {
+    background: blue;
+    height: 50vh;
+    width : 50vw;
+}
+
+mat-card {
+  background: white;
+}

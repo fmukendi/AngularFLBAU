@@ -1,3 +1,7 @@
+import { HolyGrailComponent } from './holy-grail/holy-grail.component';
+import { ItemsAndAlignmentComponent } from './items-and-alignment/items-and-alignment.component';
+import { GapAndWrapComponent } from './gap-and-wrap/gap-and-wrap.component';
+import { JustifyingContentComponent } from './justifying-content/justifying-content.component';
 import { MainCrossAxisComponent } from './main-cross-axis/main-cross-axis.component';
 import { BasicRowColumnComponent } from './basic-row-column/basic-row-column.component';
 import { ContainerBasicsComponent } from './container-basics/container-basics.component';
@@ -34,6 +38,22 @@ const routes: Routes = [
     {
         path: 'manrowcrossaxis',
         component: MainCrossAxisComponent
+    },
+    {
+        path: 'justifyContent',
+        component: JustifyingContentComponent
+    },
+    {
+        path: 'gapwrap',
+        component: GapAndWrapComponent
+    },
+    {
+        path: 'items',
+        component: ItemsAndAlignmentComponent
+    },
+    {
+        path: 'holy',
+        component: HolyGrailComponent
     },
 
     // otherwise redirect to home

@@ -1,0 +1,39 @@
+/* first let's override the root css that gives the cards a 1em margin so that can see how gap works */
+/* mat-card {
+    margin: 0;
+  } */
+  
+  h2 {
+    margin: 1em 0 .5em .5em;
+  }
+/*   
+  .container-no-size {
+    margin: 0;
+    padding: 0;
+    background: #01ab45; // For browsers that do not support gradients 
+    background: -webkit-linear-gradient(#01ab45, #c7e800);  For Safari 5.1 to 6.0 
+    background: -o-linear-gradient(#01ab45, #c7e800);  For Opera 11.1 to 12.0 
+    background: -moz-linear-gradient(#01ab45, #c7e800);  For Firefox 3.6 to 15 
+    background: linear-gradient(#01ab45, #c7e800);  Standard syntax 
+  }
+   */
+
+   .containerx {
+    background: blue;
+    height: 50vh;
+    width : 50vw;
+}
+
+mat-card {
+  background: white;
+}
+
+.container-column {
+  height: 100vh;
+  background: blue;
+}
+
+.container-row {
+  width: 100vw;
+  background: blue;
+}

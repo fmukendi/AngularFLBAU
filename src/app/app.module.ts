@@ -1,3 +1,4 @@
+import { CurComponentService } from './cur-component.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -23,6 +24,10 @@ import { ContainerBasicsComponent } from './container-basics/container-basics.co
 import { BasicRowColumnComponent } from './basic-row-column/basic-row-column.component';
 import { ReversedRowColumnComponent } from './reversed-row-column/reversed-row-column.component';
 import { MainCrossAxisComponent } from './main-cross-axis/main-cross-axis.component';
+import { JustifyingContentComponent } from './justifying-content/justifying-content.component';
+import { GapAndWrapComponent } from './gap-and-wrap/gap-and-wrap.component';
+import { ItemsAndAlignmentComponent } from './items-and-alignment/items-and-alignment.component';
+import { HolyGrailComponent } from './holy-grail/holy-grail.component';
 
 @NgModule({
     imports: [
@@ -50,9 +55,14 @@ import { MainCrossAxisComponent } from './main-cross-axis/main-cross-axis.compon
         ContainerBasicsComponent,
         BasicRowColumnComponent,
         ReversedRowColumnComponent,
-        MainCrossAxisComponent
+        MainCrossAxisComponent,
+        JustifyingContentComponent,
+        GapAndWrapComponent,
+        ItemsAndAlignmentComponent,
+        HolyGrailComponent
     ],
     providers: [
+        CurComponentService
     ],
     bootstrap: [AppComponent]
 })

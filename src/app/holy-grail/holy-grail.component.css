@@ -1,0 +1,66 @@
+.header, .footer {
+    background: purple;
+    color: white;
+    height: 10vh;
+  }
+  
+  .side-pane {
+    width: 25%;
+    padding: 2em;
+    height: 80vh;
+    overflow: auto;
+  }
+  
+  .small {
+    width: 100vw !important;
+    padding: 2em;
+  }
+  
+  .main-content {
+    width: 50%;
+    padding: 2em;
+    height: 80vh;
+    overflow: auto;
+  }
+  
+  .master-container {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+       background: #01ab45; /* For browsers that do not support gradients */
+      background: -webkit-linear-gradient(#01ab45, #c7e800); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(#01ab45, #c7e800); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(#01ab45, #c7e800); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(#01ab45, #c7e800); /* Standard syntax */
+  }
+  
+  .color-grey {
+      background-color: #ccc;
+  }
+  
+  .color-red {
+      color: red;
+  }
+  
+  .color-grey {
+      color: yellow;
+  }
+  
+  .blue-bg {
+      background: blue;
+  }
+  
+  .green-bg {
+    background: green;
+  }
+  
+  .orange-bg {
+    background: orange;
+  }
+  
